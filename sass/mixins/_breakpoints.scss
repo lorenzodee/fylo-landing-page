@@ -1,0 +1,12 @@
+@mixin media-breakpoint-up($breakpoint) {
+  $min-width: map-get($grid-breakpoints, $breakpoint);
+
+  @if ($min-width == 0) {
+    @content;
+  }
+  @else {
+    @media only screen and (min-width: $min-width) {
+      @content;
+    }
+  }
+}

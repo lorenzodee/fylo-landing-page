@@ -9,65 +9,116 @@
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 
-  Features
-  Team
-  Sign In
+  <div class="container">
+    <nav class="container__row nav">
+      <img class="nav__brand" src="images/logo.svg" alt="Fylo" />
+      <div class="nav__links nav__links--right">
+        <a class="nav__link" href="#">Features</a>
+        <a class="nav__link" href="#">Team</a>
+        <a class="nav__link" href="#">Sign In</a>
+      </div>
+    </nav>
+  </div>
 
-  All your files in one secure location, accessible anywhere.
+  <div class="container">
+    <section class="container__row container__row--md-reverse hero">
+      <div class="container__col-12 container__col-md-6 hero__image">
+        <img src="images/illustration-1.svg" alt="All your files in one secure location, accessible anywhere." />
+      </div>
+      <div class="container__col-12 container__col-md-6 hero__content">
+        <h1 class="hero__heading">All your files in one secure location, accessible anywhere.</h1>
+        <p class="hero__body">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+        <form class="hero__form">
+          <input class="hero__form-email-input form-control" name="email" value="" placeholder="Enter your email&hellip;" />
+          <button class="hero__form-submit-button btn btn--call-to-action">Get Started</button>
+        </form>
+      </div>
+    </section>
+  </div>
 
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family, and co-workers.
+  <div class="container container--bg-curve">
+    <section class="container__row container__row--md-reverse testimonials">
+      <div class="container__col-12 container__col-md-6 testimonials__image">
+        <img src="images/illustration-2.svg" alt="Stay productive, wherever you are" />
+      </div>
+      <div class="container__col-12 container__col-md-6 testimonials__content">
+        <h1 class="testimonials__heading">Stay productive, wherever you are</h1>
+        <p class="testimonials__body">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+        <p class="testimonials__body">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</p>
+        <p class="testimonials__call-to-action-link"><a href="#">See how Fylo works <img class="testimonials__call-to-action-link-icon" src="images/icon-arrow.svg" alt="See how Fylo works" /></a></p>
+        <blockquote class="testimonial">
+          <p>Fylo has improved our team productivity by an order of magnitude. Since 
+          making the switch our team has become a well-oiled collaboration machine.</p>
+          <footer class="testimonial__author">
+            <img class="testimonial__author-photo" src="images/avatar-testimonial.jpg" alt="Kyle Burton" />
+            <div class="testimonial__author-info">
+              <div class="testimonial__author-name">Kyle Burton</div>
+              <div class="testimonial__author-org">Founder & CEO, Huddle</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+  </div>
 
-  Get Started
+  <div class="container container--bg-desaturated-blue">
+    <section class="container__row call-to-action">
+      <div class="container__col-12 container__col-md-6">
+        <h1 class="call-to-action__heading">Get early access today</h1>
+        <p class="call-to-action__body">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+      </div>
+      <div class="container__col-12 container__col-md-6">
+        <form class="call-to-action__form">
+          <input class="call-to-action__form-email-input form-control" name="email" value="" placeholder="email@example.com" />
+          <button class="call-to-action__form-submit-button btn btn--call-to-action">Get Started For Free</button>
+        </form>
+      </div>
+    </section>
+  </div>
 
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you 
-  covered for all of your file storage needs.
-
-  Securely share files and folders with friends, family and colleagues for 
-  live collaboration. No email attachments required!
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <div class="container container--bg-dark-blue">
+    <footer class="container__row footer">
+      <div class="container__col-12 footer__brand">
+        <img src="images/logo.svg" alt="Fylo" />
+      </div>
+      <address class="container__col-12 container__col-lg-4 footer__links">
+        <div class="footer__link"><img class="footer__link-icon" src="images/icon-phone.svg" alt="Phone" /> <span>Phone: <a href="tel:+15431234567">+1-543-123-4567</a></span></div>
+        <div class="footer__link"><img class="footer__link-icon" src="images/icon-email.svg" alt="Email" /> <a href="mailto:example@fylo.com">example@fylo.com</a></div>
+      </address>
+      <div class="container__col-12 container__col-sm-4 container__col-lg-3 footer__links">
+        <a class="footer__link" href="#">About Us</a>
+        <a class="footer__link" href="#">Jobs</a>
+        <a class="footer__link" href="#">Press</a>
+        <a class="footer__link" href="#">Blog</a>
+      </div>
+      <div class="container__col-12 container__col-sm-4 container__col-lg-3 footer__links">
+        <a class="footer__link" href="#">Contact Us</a>
+        <a class="footer__link" href="#">Terms</a>
+        <a class="footer__link" href="#">Privacy</a>
+      </div>
+      <div class="container__col-12 container__col-sm-4 container__col-lg-2 footer__links footer__links--social">
+        <a class="footer__link footer__link--social" href="#">
+          <i class="fab fa-circle fa-facebook-f"></i>
+        </a>
+        <a class="footer__link footer__link--social" href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="footer__link footer__link--social" href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="container__col-12 attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Lorenzo Dee</a>.
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

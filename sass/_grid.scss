@@ -1,0 +1,49 @@
+.container {
+  display: block;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    &__row {
+      max-width: 1440px; // 80px + 1280px + 80px
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+}
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: "#{$breakpoint}-";
+    @if ($min-width == 0) {
+      $infix: "";
+    }
+    .container__row--#{$infix}reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: "-#{$breakpoint}";
+    @if ($min-width == 0) {
+      $infix: "";
+    }
+    @for $i from 1 through $grid-columns {
+      .container__col#{$infix}-#{$i} {
+        flex-basis: ($i / $grid-columns) * 100%;
+      }
+    }
+  }
+}
+
